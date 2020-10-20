@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="../res/css/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    
+<style>
+    :root{
+    --primary:rgb(117, 223, 90);
+    }
+    html {
+    box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+    box-sizing: inherit;
+    }
+    .head{
+        margin-bottom:15%;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+
+    @media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    }
+
+    .text {
+    width: 80%;
+        margin: 40px auto 40px auto;
+        text-align:center;
+    }
+    .text p{
+    font-size: 17px;
+    color: rgb(85, 75, 18);
+
+    }
+
+    body{
+    background-color:white;
+    color:white;
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+    .team{
+    width:320px;
+    height: 400px;
+    overflow: hidden;
+    margin:8px;
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position:relative;
+    background-color: #f7e9e934;
+    }
+
+    .testimonial{
+    background: rgb(235, 228, 228);
+    text-align: center;
+    padding: 30px 30px 50px;
+    margin: 0 15px 100px;
+    position: relative;
+    margin-bottom: 150px;
+    width:360px;
+
+    }
+    .testimonial:before,
+    .testimonial:after{
+    content: "";
+    border-top: 40px solid rgb(235, 228, 228);;
+    border-right: 125px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    }
+    .testimonial:after{
+    border-right: none;
+    border-left: 125px solid transparent;
+    left: auto;
+    right: 0;
+    }
+    .testimonial .icon{
+    display: inline-block;
+    font-size: 80px;
+    color: #bd986b;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    }
+    .testimonial .description{
+    font-size: 16px;
+    color: rgb(100, 85, 37);
+    text-align: justify;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    letter-spacing: -1px;
+    }
+    .testimonial .testimonial-content{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    }
+    .testimonial .pic{
+    display: inline-block;
+    border: 6px solid white;
+    border-radius: 45%;
+    box-shadow: 0 0 2px 2px #daad86;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    }
+    .testimonial .pic img{
+    width: 100%;
+    height: auto;
+    }
+    .testimonial .title{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+    }
+    .testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: #6d4725;
+    }
+
+
+    .pic img{
+    width: 100px !important;
+    height: 50px;
+    }
+
+    .header{
+    text-align: center;
+    margin:auto;
+    max-width:70vh;
+    padding-block:48px;
+    margin-top:100px;
+    margin-bottom:48px;
+    font-family: monospace;
+    border-bottom: 2px dashed rgb(44, 30, 3);
+    color:rgb(44, 30, 3);
+    font-size:32px;
+    letter-spacing: 4px;
+    }
+
+    section{
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color:rgb(108, 177, 101);
+    margin:50px 50px 50px 50px;
+    border-radius: 2%;
+    
+    }
+    section::before{
+    content:'';
+    position: absolute;
+    top:0;
+    width:95%;
+    left:2.5%;
+    z-index:-1;
+    height:60%;
+    background:linear-gradient(30deg,#ad7b1c,#ffa601);
+    border-radius:0 0 50% 50%
+
+    }
+
+
+
+    .team::before{
+    content: '';
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    filter:blur(6px) grayscale(100%);
+    }
+    .team img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 320px;
+    height:400px;
+    border-radius:16px;
+    z-index:3;
+    object-fit: cover;
+    border:none;
+    transition-duration:.2s;
+    transition-timing-function: linear;
+    }
+
+    .team:hover img{
+    width:160px;
+    height:200px;
+    border:2px solid var(--primary);
+    left:80px;
+    top:60px;
+    }
+    .team .info{
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    right: 0;
+    z-index: 2;
+    color: #363636;
+    padding:10px;
+    border-top: 8px solid var(--primary);
+    border-radius: 50% 50% 0px 0px;
+    padding-top: 80px;
+    text-align: center;
+    transform: scale(2);
+    transition-duration: .2s;
+    transition-timing-function: linear;
+    }
+
+    .team .name{
+    font-size: 24px;
+    padding:0px;
+    text-transform: capitalize;
+    }
+    .team .title{
+    color: grey;
+    text-transform: capitalize;
+    }
+    .team:hover .info{
+    transform: scale(1);
+    transition-duration: .2s;
+    transition-timing-function: linear;
+    }
+
+    .team .social{
+    padding-block: 16px;
+    font-size:24px;
+    }
+
+    .team .social i{
+    display: inline-block;
+    width: 40px;
+    padding: 10px;
+    background-color: #ededed;
+    border-radius: 16px;
+    margin: 4px;
+    cursor: pointer;
+    }
+    .team .social i:hover{
+    color:var(--primary);
+    background-color: #363636;
+
+    }
+    
+</style>
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            People behind DCEI
+        </div>
+        <div class="text">
+            <p>
+                s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+    <section>
+        <div class="header">
+            Governing council
+        </div>
+        <section>
+        
+        
+            <div class="testimonial">
+                <span class="icon fa fa-quote-left"></span>
+                <p class="description">
+                    Dr. K.S. Dasgupta holds a PhD (Engineering) from Indian Institute of Technology, Bombay. He has finished his B.E. in Electronics and Telecommunication and Post Graduate degree in Computer Science from Jadavpur University.
+
+Prior to joining DA-IICT, Dr. K.S. Dasgupta served as the Director of Indian Institute of Space Science and Technology (IIST), Trivandrum, a deemed University under the aegis of Department of Space, Government of India, for five and half years.</p>
+                <div class="testimonial-content">
+                    <div class="pic"><img src="assets/images/nrp.jpg" class=""alt=""></div>
+                    <h3 class="title">Dr. K.S Dasgupta</h3>
+                    <span class="post">Chairman DCEI Governing Council</span>
+
+                    <span class="post">Director, DA-IICT Gandhinagar</span>
+                </div>
+            </div>
+        
+            <div class="testimonial">
+                <span class="icon fa fa-quote-left"></span>
+                <p class="description">
+                    Mr. Mihir Joshi has been with GVFL for over 15 years and has experienced all stages of VC life cycle - fund raising, structuring of Funds, investments and harvesting returns to the investors. His learning curve started with liquidation of 3 funds (22+ exits) through various routes including IPO, secondary sale, acquisition, management buy out and buy back. He has been associated with some of the marquee investments of GVFL and represented GVFL on board of several investee companies like e-infochips etc..</p>
+                <div class="testimonial-content">
+                    <div class="pic"><img src="assets/images/mjoshi.jpg" alt=""></div>
+                    <h3 class="title">Mr. Mihir Joshi</h3>
+                    <span class="post">President, GVFL</span>
+                </div>
+            </div>
+        
+            <div class="testimonial">
+                <span class="icon fa fa-quote-left"></span>
+                <p class="description">
+                    Anish Mathuria is a Professor at DA-IICT. His research interests are in information security and cryptography.
+
+Anish is currently an Associate Editor for Sadhana, a journal published by Indian Academy of Sciences. He has served on the program committees of ICISS, Indocrypt, and SPACE conferences.
+Anish was an invited speaker at the CIMPA-UNESCO-INDIA School on Security for Computer Systems and Networks held in 2005.</p>
+                <div class="testimonial-content">
+                    <div class="pic"><img src="assets/images/anishm.jpg" alt=""></div>
+                    <h3 class="title">Prof. Anish Mathuria</h3>
+                    <span class="post">DA-IICT Gandhinagar</span>
+                </div>
+            </div>
+            
+            
+        </section>
+        </section>
+    
+    
+        
+        
+       
+        <section>
+            <div class="header">
+                Executive council
+            </div>
+            <section>
+            
+            
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Prof. Sanjeev Gupta is Dean (Research) since June 2016 after serving as Dean (Students) for five academic years (2011-2016) at DA-IICT. Currently, he is also a Member of Governing Council (as Additional Director) and Chairman, Executive Council of DCEI (DA-IICT Centre for Entrepreneurship and Innovation) – a Section 8 Company (under Companies Act 2013).
+                    </p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/SGupta0.jpg" class=""alt=""></div>
+                        <h3 class="title">Prof. Sanjeev Gupta</h3>
+                        <span class="post">Chairman, DCEI Executive Council</span>
+                    </div>
+                </div>
+            
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Saurabh Tiwari is a Faculty Member at Dhirubhai Ambani Institute of Information and Communication Technology , Gandhinagar. His current research interests are in the area of Requirements Engineering, Empirical Software Engineering, and Model-Based Software Engineering. 
+                    </p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/saurabh.jpg" alt=""></div>
+                        <h3 class="title">Prof. Saurabh Tiwari</h3>
+                        <span class="post">Convener - DCEI</span>
+                    </div>
+                </div>
+            
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Anish Mathuria is a Professor at DA-IICT. His research interests are in information security and cryptography.
+
+Anish is currently an Associate Editor for Sadhana, a journal published by Indian Academy of Sciences. He has served on the program committees of ICISS, Indocrypt, and SPACE conferences.
+</p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/anishm.jpg" alt=""></div>
+                        <h3 class="title">Prof. Anish Mathuria</h3>
+                        <span class="post">DA-IICT Gandhinagar</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Yash Vasavada is currently an associate professor at DAIICT, and he works in the areas of communication system design and development and application of machine learning algorithms to communications and signal processing. He has over twenty years of experience at Hughes Networks systems in Germantown, Maryland, USA, where he has worked on design, development and deployment of a number of GEO, MEO and LEO satellite systems.</p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/yash.jpg" alt=""></div>
+                        <h3 class="title">Prof. Yash Vasavada</h3>
+                        <span class="post">DA-IICT Gandhinagar</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                       he holds a doctorate in astrophysical fluid dynamics. His research methods are theoretical in nature, with his present research interests being astrophysical accretion, fluid dynamics and nonlinear systems. he have publications in
+peer-reviewed journals of astrophysics, gravitation, nonlinear dynamics, condensed matter physics, nuclear physics, complex systems and geophysics.</p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/arnab.jpg" alt=""></div>
+                        <h3 class="title">Prof. Arnab Kumar Ray</h3>
+                        <span class="post">DA-IICT Gandhinagar</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Dr. Yash Agrawal received his Ph.D. and M.Tech. Degrees in VLSI Design Automation and Techniques in E&CE Department from National Institute of Technology, Hamirpur, Himachal Pradesh, India.
+
+Dr. Yash has been expert and distinguished guest at various places. He is Editor and Reviewer of several reputed Journals. He has been Secretary and Coordiantor of various forums and events.</p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/Yash-Agrawal.jpg" alt=""></div>
+                        <h3 class="title">Prof. Yash Agrawal</h3>
+                        <span class="post">DA-IICT Gandhinagar</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        A Science & Law Graduate and a Fellow Company Secretary. Holds a  20 years of experience in Secretarial & Legal Compliances, Drafting of various documents, Litigation Management, Corporate Governance, VC / PE fund structuring and fund raising. Worked with Cadila Pharmaceuticals Limited as Company Secretary & Compliance Officer of the Company and responsible for Secretarial & legal compliance for all the Cadila Pharma Group Companies (Domestic & foreign).</p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/prashant.jpg" alt=""></div>
+                        <h3 class="title">Mr. Prashant Mehta</h3>
+                        <span class="post">AGM Compliance, Cadila Pharmaceuticals Limited</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Mr. K. Thyagrajan has a professional career journey of over 30 years that has traversed across a variety of fields; hard-core engineering (involving design-manufacturing-project management), management consulting, mentoring and propagating next-generation entrepreneurship, and academic teaching in diverse areas of technology, business management and entrepreneurship, and advisory in policy making. </p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/tyagi.jpg" alt=""></div>
+                        <h3 class="title">Mr. K. Thyagrajan</h3>
+                        <span class="post">Mentopreneur & Board Member, iCreate, Ahmedabad</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <span class="icon fa fa-quote-left"></span>
+                    <p class="description">
+                        Prior to Hues Hub, she was a technology VC investor at CIIE.CO and GVFL Limited. Some of my investments are - Tookitaki, mech mocha, Alma Connect, Travelyaari, Vphrase and Formcept. Developed India’s first Internet and Mobile accelerator called iAccelerator at CIIE. 75+ seed investments. 1000+ startups supported through various programs. 
+                    </p>
+                    <div class="testimonial-content">
+                        <div class="pic"><img src="assets/images/tanvi_rang.jpg" alt=""></div>
+                        <h3 class="title">Ms Tanvi Rangwala</h3>
+                        <span class="post">CEO House Hub</span>
+                    </div>
+                </div>
+            </section>
+            </section>
+    
+    <div>
+    <section>
+        <div class="header">
+            Student executive council
+        </div>
+        <div class="text">
+            <p>
+                s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <section style="margin:7%;">
+            <div class="team" style="--img:url(assets/images/DKP.jpeg)">
+                <img src="assets/images/DKP.jpeg" alt="">
+                <div class="info">
+                    <div class="name">Dushyant Pathak</div>
+                    <div class="title">Mentor</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="team" style="--img:url(assets/images/nik_fun.jpg)">
+                <img src="assets/images/nik_fun.jpg" alt="">
+                <div class="info">
+                    <div class="name">Nikunj shah</div>
+                    <div class="title">Mentor</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="team" style="--img:url(assets/images/11.jpg)">
+                <img src="assets/images/11.jpg" alt="">
+                <div class="info">
+                    <div class="name">Vedant thakkar</div>
+                    <div class="title">Team Lead</div>
+                    <div class="title">Lead - Finance</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="team" style="--img:url(assets/images/11.jpg)">
+                <img src="assets/images/11.jpg" alt="">
+                <div class="info">
+                    <div class="name">Mahi Patel</div>
+                    <div class="title">Lead - Content and Communication</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="team" style="--img:url(assets/images/11.jpg)">
+                <img src="assets/images/11.jpg" alt="">
+                <div class="info">
+                    <div class="name">Parth Katrodiya</div>
+                    <div class="title">Lead - Media and Branding</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="team" style="--img:url(assets/images/shiv.jpg)">
+                <img src="assets/images/shiv.jpg" alt="">
+                <div class="info">
+                    <div class="name">Shiv Raj</div>
+                    <div class="title">Lead - Public Relations</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+           
+                
+            
+            <div class="team" style="--img:url(assets/images/darsh.jpg)">
+                <img src="assets/images/darsh.jpg" alt="">
+                <div class="info">
+                    <div class="name">Darsh Badodariya</div>
+                    <div class="title">Lead - Partnerships</div>
+                    <div class="social">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat-ghost"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+        
+        
+    </section>
+</div>
+    
+</body>
+</html>
