@@ -220,7 +220,26 @@ header.sticky ul li a {
   margin: 0;
 }
 
+.services-header{
+  color: #000;
+  margin-top: 10%
+}
 
+.float-child {
+  float: left;
+}
+.cards-code{
+  width: 1000px;
+  margin-left: 250px;
+}
+.cards-img-code{
+  width: 1000px;
+  height: 300px;
+}
+
+.card-body{
+  background: #81AF41;
+}
 /*-----------------------------------*/
 /* **About Section** */
 .about {
@@ -242,6 +261,15 @@ header.sticky ul li a {
   padding: 1.5%;
 }
 
+.services-btn {
+  color: #000;
+  background-color: #fff;
+}
+
+.services-btn:hover {
+  color: #fff;
+  background-color: blue;
+}
 
 /*-----------------------------------*/
 /* --Responsiveness-- */
