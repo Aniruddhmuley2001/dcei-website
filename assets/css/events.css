@@ -1,4 +1,4 @@
-.pageHeading {
+/* .pageHeading {
 	text-align: center;
 	padding: 40px 0 0 0;
 	font-size: 42px;
@@ -14,17 +14,17 @@ body {
 	font-size: 17px;
 	font-weight: 400;
 	background-color: white;
-}
+} */
 
-h1 {
-	font-family: 'Merriweather', serif;
+/* h1 {
+	font-family: 'Roboto', sans-serif;
 	font-size: 400%;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: 400;
-}
+} */
 
-header {
+/* header {
 	padding: 48px 0 0px 0;
 	font-size: 20px;
 	text-align: center;
@@ -37,7 +37,7 @@ header ul li {
 
 li a {
 	color: #404041;
-}
+} */
 
 .timeline {
 	position: relative;
