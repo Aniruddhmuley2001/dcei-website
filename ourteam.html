@@ -15,14 +15,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="nicepage.css" media="screen">
+        <link rel="stylesheet" href="Page-2.css" media="screen">
+    <meta property="og:title" content="Page 2">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  
     
 <style>
     :root{
-    --primary:rgb(117, 223, 90);
+    --primary:#3f6188;
     }
     html {
     box-sizing: border-box;
     }
+    #wrapper-non-nav {
+        height: 100vh;
+        padding: 5rem 0 0;
+      }
+      
+      /* Middle Wrap */
+      .mid-wrapper {
+        height: 10em;
+        position: relative;
+      }
+      .animate__animated.animate__zoomIn {
+        --animate-duration: 1.5s;
+      }
 
     *, *:before, *:after {
     box-sizing: inherit;
@@ -39,12 +66,18 @@
     margin-bottom: 16px;
     padding: 0 8px;
     }
-
+    .topnav .icon {
+        display: none;
+      }
+      
     @media screen and (max-width: 650px) {
     .column {
         width: 100%;
         display: block;
     }
+    .topnav {
+        padding-top: 1rem;
+      }
     }
 
     .text {
@@ -54,12 +87,12 @@
     }
     .text p{
     font-size: 17px;
-    color: rgb(85, 75, 18);
+    color: #fdc287;
 
     }
 
     body{
-    background-color:white;
+    background-color:#264977;
     color:white;
     font-family: 'Roboto Condensed', sans-serif;
     }
@@ -114,6 +147,26 @@
     opacity: 0.9;
     letter-spacing: -1px;
     }
+    ::-webkit-scrollbar {
+        width: 20px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #323234; 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #323234; 
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #323234; 
+        cursor: pointer;
+      }
     .testimonial .testimonial-content{
     width: 100%;
     position: absolute;
@@ -151,16 +204,16 @@
     height: 50px;
     }
 
-    .header{
+    .header1{
     text-align: center;
     margin:auto;
     max-width:70vh;
     padding-block:48px;
-    margin-top:100px;
-    margin-bottom:48px;
+    margin-top:70px;
+    margin-bottom:0px;
     font-family: monospace;
-    border-bottom: 2px dashed rgb(44, 30, 3);
-    color:rgb(44, 30, 3);
+    border-bottom: 2px dashed #dedee9;
+    color:#dedee9;
     font-size:32px;
     letter-spacing: 4px;
     }
@@ -171,9 +224,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background-color:rgb(108, 177, 101);
+    background-color:#81af41;
     margin:50px 50px 50px 50px;
-    border-radius: 2%;
+    border-radius: 1%;
     
     }
     section::before{
@@ -184,7 +237,7 @@
     left:2.5%;
     z-index:-1;
     height:60%;
-    background:linear-gradient(30deg,#ad7b1c,#ffa601);
+    background:#81af41;
     border-radius:0 0 50% 50%
 
     }
@@ -228,6 +281,7 @@
     .team .info{
     background-color: white;
     position: absolute;
+    top:44%;
     bottom: 0px;
     left:0;
     right: 0;
@@ -259,7 +313,7 @@
     }
 
     .team .social{
-    padding-block: 16px;
+    padding-block: 2px;
     font-size:24px;
     }
 
@@ -277,12 +331,74 @@
     background-color: #363636;
 
     }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.6s;
+        padding: 40px 100px;
+        z-index: 100000;
+      }
+      
+      header.sticky {
+        padding: 7px 100px;
+        background: #323234;
+      }
+      
+      header ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      header ul li {
+        position: relative;
+        list-style: none;
+        padding-top: 0%;
+      }
+      
+      header ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        letter-spacing: 0.15rem;
+        font-weight: 500px;
+        transition: 0.6s;
+        color: #dedee9;
+        font-size: 1rem;
+      }
+      
+      header ul li a:hover {
+        text-decoration: none;
+      }
+      
+      .banner {
+        position: relative;
+        width: 100%;
+      }
+      
+      header.sticky ul li a {
+        color: #fff;
+        padding-top: 10%;
+      }
     
 </style>
 </head>
 <body>
+    <header class="topnav" id="myTopnav" >
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./ourteam.html">Contact</a></li>
+        </ul>
+    </header>
     <div class="head">
-        <div class="header">
+        <div class="header1">
             People behind DCEI
         </div>
         <div class="text">
@@ -292,7 +408,7 @@
         </div>
     </div>
     <section>
-        <div class="header">
+        <div class="header1">
             Governing council
         </div>
         <section>
@@ -347,7 +463,7 @@ Anish was an invited speaker at the CIMPA-UNESCO-INDIA School on Security for Co
         
        
         <section>
-            <div class="header">
+            <div class="header1">
                 Executive council
             </div>
             <section>
@@ -459,7 +575,7 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
     
     <div>
     <section>
-        <div class="header">
+        <div class="header1">
             Student executive council
         </div>
         <div class="text">
@@ -467,7 +583,7 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                 s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
         </div>
-        <section style="margin:7%;">
+        <section style="margin:5%;">
             <div class="team" style="--img:url(assets/images/DKP.jpeg)">
                 <img src="assets/images/DKP.jpeg" alt="">
                 <div class="info">
@@ -491,13 +607,13 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
             </div>
             <div class="team" style="--img:url(assets/images/11.jpg)">
-                <img src="assets/images/11.jpg" alt="">
+                <img src="assets/images/vedant.jpg" alt="">
                 <div class="info">
                     <div class="name">Vedant thakkar</div>
                     <div class="title">Team Lead</div>
@@ -506,14 +622,14 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
             </div>
             
             <div class="team" style="--img:url(assets/images/11.jpg)">
-                <img src="assets/images/11.jpg" alt="">
+                <img src="assets/images/mahi.jpg" alt="">
                 <div class="info">
                     <div class="name">Mahi Patel</div>
                     <div class="title">Lead - Content and Communication</div>
@@ -521,13 +637,13 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
             </div>
             <div class="team" style="--img:url(assets/images/11.jpg)">
-                <img src="assets/images/11.jpg" alt="">
+                <img src="assets/images/kpsir.jpg" alt="">
                 <div class="info">
                     <div class="name">Parth Katrodiya</div>
                     <div class="title">Lead - Media and Branding</div>
@@ -535,7 +651,7 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
@@ -550,7 +666,7 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
@@ -567,7 +683,7 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-instagram"></i>
                         <i class="fa fa-twitter"></i>
-                        <i class="fa fa-snapchat-ghost"></i>
+                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
                 
@@ -577,7 +693,118 @@ Dr. Yash has been expert and distinguished guest at various places. He is Editor
         
         
     </section>
+    
 </div>
+<section style="background-color:rgb(241, 223, 171);border-radius:0%"class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-section-3" id="carousel_a742">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+      <h2 class="u-text u-text-1">Contact Us</h2>
+      <div class="u-border-7 u-border-palette-2-base u-line u-line-horizontal u-line-1"></div>
+      <p class="u-text u-text-2">We align leaders around a shared purpose and strategic story that catalyzes their business and brand to take action.</p>
+      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-30 u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-left-cell u-palette-5-dark-3 u-size-30 u-layout-cell-1">
+                      <div class="u-container-layout u-valign-middle u-container-layout-1"><span class="u-border-3 u-border-grey-15 u-icon u-icon-circle u-spacing-20 u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7ee5"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-7ee5" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="u-svg-content"><g><g><path d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z"></path>
+</g>
+</g><g><g><path d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z"></path>
+</g>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+                        <h5 class="u-text u-text-grey-40 u-text-3">Address:</h5>
+                        <p class="u-text u-text-4">near, DAIICT-campus, Reliance Cross Rd,<br> Gandhinagar, Gujarat 382007
+                        </p>
+                      </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-palette-5-dark-3 u-size-30 u-layout-cell-2">
+                      <div class="u-container-layout u-valign-middle u-container-layout-2"><span class="u-border-3 u-border-grey-50 u-icon u-icon-circle u-spacing-20 u-text-grey-40 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b327"></use></svg><svg xmlns="http://www.w3.org/2000/svg" id="svg-b327" enable-background="new 0 0 479.058 479.058" viewBox="0 0 479.058 479.058" class="u-svg-content"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"></path></svg></span>
+                        <h5 class="u-align-center u-text u-text-grey-40 u-text-5">Email:</h5>
+                        <a href = "mailto: sec_ceid@daiict.ac.in" class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-text-body-alt-color u-text-hover-palette-2-base u-btn-1">sec_ceid@daiict.ac.in</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-left-cell u-palette-5-dark-3 u-size-30 u-layout-cell-3">
+                      <div class="u-container-layout u-valign-middle u-container-layout-3"><span class="u-border-3 u-border-grey-15 u-icon u-icon-circle u-spacing-20 u-text-grey-40 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2291"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-2291" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve" class="u-svg-content"><g><g><path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479    V353.188z"></path>
+</g>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+                        <h5 class="u-text u-text-grey-40 u-text-6">Call us:</h5>
+                        <p class="u-text u-text-7">1 (234) 567-891 <br>1 (234) 987-654
+                        </p>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-layout-cell u-palette-5-dark-3 u-size-30 u-layout-cell-4">
+                      <div class="u-container-layout u-valign-middle u-container-layout-4">
+                        <h5 class="u-text u-text-grey-40 u-text-8">Contact Us</h5>
+                        <p class="u-text u-text-9">Contact us for a quote. Help or to join the team.</p>
+                        <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-type-line u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5353"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-5353"><path d="M56.1,4c28.7,0,52.1,23.4,52.1,52.1s-23.4,52.1-52.1,52.1S4,84.8,4,56.1S27.4,4,56.1,4 M56.1,0C25.1,0,0,25.1,0,56.1 s25.1,56.1,56.1,56.1s56.1-25.1,56.1-56.1S87.1,0,56.1,0L56.1,0z"></path><path d="M60.2,97H45c-1.1,0-2-0.9-2-2V60.3h-5.2c-1.1,0-2-0.9-2-2V45.4c0-1.1,0.9-2,2-2H43v-6.3c0-8.4,4.5-17.3,17.3-17.3l11.2,0 c1.1,0,2,0.9,2,2v12.5c0,1.1-0.9,2-2,2h-8.2c-0.8,0-1.2,0.3-1.2,1.5v5.6h9.3c0.6,0,1.1,0.2,1.5,0.7c0.4,0.4,0.6,1,0.5,1.5l-1.3,12.9 c-0.1,1-1,1.8-2,1.8h-8V95C62.2,96.1,61.3,97,60.2,97z M47,93h11.2V58.3c0-1.1,0.9-2,2-2h8.2l0.9-8.9h-9.1c-1.1,0-2-0.9-2-2v-7.6 c0-3.8,2.6-5.5,5.2-5.5h6.2v-8.5l-9.2,0C48,23.8,47,33.9,47,37.1v8.3c0,1.1-0.9,2-2,2h-5.2v8.9H45c1.1,0,2,0.9,2,2V93z"></path></svg></span>
+                          </a>
+                          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-linkedin u-social-type-line u-icon-"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-dd6e"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-dd6e"><path d="M56.1,4c28.7,0,52.1,23.4,52.1,52.1s-23.4,52.1-52.1,52.1S4,84.8,4,56.1S27.4,4,56.1,4 M56.1,0C25.1,0,0,25.1,0,56.1 s25.1,56.1,56.1,56.1s56.1-25.1,56.1-56.1S87.1,0,56.1,0L56.1,0z"></path><path d="M45.8,89.2c-7.8,0-15.3-2.2-21.7-6.3c-0.8-0.5-1.1-1.5-0.8-2.3c0.3-0.9,1.1-1.4,2.1-1.3l0.3,0c1,0.1,1.8,0.2,2.7,0.2 c4.1,0,8-0.9,11.4-2.7c-4.3-1.6-7.7-5.1-9.2-9.7c-0.2-0.6-0.1-1.4,0.4-1.9c0.1-0.1,0.2-0.2,0.3-0.3c-3.4-2.8-5.6-7.1-5.6-11.8v-0.2 c0-0.7,0.4-1.4,1-1.7c0.3-0.2,0.7-0.3,1.1-0.3c-1.3-2.3-1.9-4.8-1.9-7.5c0-2.8,0.7-5.5,2.1-7.7c0.3-0.6,0.9-0.9,1.6-1 c0.7,0,1.3,0.2,1.7,0.7c5.9,7.3,14.5,11.9,23.8,13.1c0-0.3,0-0.6,0-0.9c0-8.5,6.9-15.4,15.4-15.4c3.9,0,7.7,1.4,10.4,4 c2.3-0.6,4.6-1.5,6.9-2.8c0.7-0.4,1.6-0.3,2.3,0.2c0.6,0.5,0.9,1.4,0.6,2.2c-0.3,1.1-0.8,2.1-1.4,3.1c0.1-0.1,0.3-0.1,0.4-0.2 c0.8-0.4,1.8-0.2,2.4,0.5c0.6,0.7,0.6,1.7,0.1,2.4c-1.7,2.5-3.8,4.8-6.2,6.8V49C86,68.8,71,89.2,45.8,89.2z M33.3,83 c4,1.4,8.2,2.2,12.5,2.2C68.5,85.2,82,66.8,82,49v-1.7c0-0.6,0.3-1.2,0.8-1.6c0.6-0.5,1.2-1,1.8-1.6c-0.5,0.1-1,0.2-1.6,0.2 c-0.9,0.1-1.8-0.5-2.1-1.3c-0.3-0.9,0.1-1.9,0.9-2.4c0.6-0.3,1.1-0.7,1.6-1.1c-0.9,0.3-1.8,0.5-2.7,0.7c-0.7,0.1-1.4-0.1-1.9-0.6 c-2.1-2.3-5.1-3.6-8.3-3.6c-6.3,0-11.4,5.1-11.4,11.4c0,1,0.1,1.8,0.3,2.7c0.1,0.6,0,1.2-0.4,1.7c-0.4,0.5-1,0.7-1.6,0.7 C47,52,37.3,47.6,30.3,40.3c-0.3,1-0.4,2-0.4,3c0,3.8,1.9,7.4,5.1,9.5c0.7,0.5,1.1,1.4,0.8,2.3c-0.3,0.9-1.1,1.4-2,1.4 c-1.2-0.1-2.5-0.3-3.6-0.6c1.1,4.1,4.5,7.4,8.8,8.2c0.9,0.2,1.6,1,1.6,1.9c0,0.9-0.6,1.8-1.5,2c-1.1,0.3-2.2,0.5-3.3,0.5 c2,3.1,5.5,5.1,9.3,5.1c0.8,0,1.6,0.6,1.9,1.4c0.3,0.8,0,1.7-0.7,2.2C42.5,80.3,38.1,82.2,33.3,83z"></path></svg></span>
+                          </a>
+                          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-instagram u-social-type-line u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4f05"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-4f05"><path d="M56.1,4c28.7,0,52.1,23.4,52.1,52.1s-23.4,52.1-52.1,52.1S4,84.8,4,56.1S27.4,4,56.1,4 M56.1,0C25.1,0,0,25.1,0,56.1 s25.1,56.1,56.1,56.1s56.1-25.1,56.1-56.1S87.1,0,56.1,0L56.1,0z"></path><path d="M76.3,41.9c-3.4,0-6.2-2.8-6.2-6.2c0-3.4,2.8-6.2,6.2-6.2s6.2,2.8,6.2,6.2C82.5,39.1,79.7,41.9,76.3,41.9z M76.3,33.5 c-1.2,0-2.2,1-2.2,2.2c0,1.2,1,2.2,2.2,2.2s2.2-1,2.2-2.2C78.5,34.5,77.5,33.5,76.3,33.5z"></path><path d="M55.9,76C44.9,76,36,67.1,36,56.1c0-11,8.9-19.9,19.9-19.9c11,0,19.9,8.9,19.9,19.9C75.8,67.1,66.9,76,55.9,76z M55.9,40.2 c-8.8,0-15.9,7.1-15.9,15.9S47.1,72,55.9,72s15.9-7.1,15.9-15.9S64.7,40.2,55.9,40.2z"></path><path d="M73.1,92.9H38.6c-10.8,0-19.5-8.8-19.5-19.6V38.8c0-10.8,8.7-19.5,19.5-19.5h34.5c10.8,0,19.5,8.7,19.5,19.5v34.6 C92.6,84.2,83.9,92.9,73.1,92.9z M38.6,23.3c-8.5,0-15.5,7-15.5,15.5v34.5c0,8.6,7,15.6,15.5,15.6h34.5c8.5,0,15.5-7,15.5-15.5V38.8 c0-8.5-7-15.5-15.5-15.5H38.6z"></path></svg></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-30 u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5">
+                  <div class="u-container-layout u-container-layout-5">
+                    <div class="u-expanded u-grey-light-2 u-map">
+                      <div class="embed-responsive">
+                        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="599" id="gmap_canvas" src="https://maps.google.com/maps?q=daiict&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://google-map-generator.com">google map generator</a></div><style>.mapouter{position:relative;text-align:right;height:599px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:599px;width:600px;}</style></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="u-clearfix u-footer u-grey-80" id="sec-1435"><div class="u-clearfix u-sheet u-sheet-1">
+    <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+      <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-type-logo u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6731"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-6731"><path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
+      </a>
+      <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-twitter u-social-type-logo u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0d02"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-0d02"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
+      </a>
+      <a class="u-social-url" target="_blank" href="https://www.instagram.com/dcei.daiict/"><span class="u-icon u-icon-circle u-social-instagram u-social-type-logo u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1e09"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-1e09"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
+      </a>
+      <a class="u-social-url" target="_blank" href="https://www.linkedin.com/company/dcei"><span class="u-icon u-icon-circle u-social-linkedin u-social-type-logo u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-780e"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-780e"><path d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9L24.1,30.9c-6.6,0-10.8-4.5-10.8-10.1c0-5.8,4.3-10.1,10.9-10.1 S34.9,15,35.1,20.8C35.1,26.4,30.8,30.9,24.1,30.9z M103.3,96.8H84.1v-31c0-7.8-2.7-13.1-9.8-13.1c-5.3,0-8.5,3.6-9.9,7.1 c-0.6,1.3-0.6,3-0.6,4.8V97H44.5c0,0,0.3-52.6,0-58h19.3v8.2c2.6-3.9,7.2-9.6,17.4-9.6c12.7,0,22.2,8.4,22.2,26.1V96.8z"></path></svg></span>
+      </a>
+    </div>
+  </div>
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.topology.min.js"></script>
     
 </body>
 </html>
