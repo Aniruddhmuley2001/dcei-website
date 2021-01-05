@@ -77,7 +77,7 @@ header ul {
 header ul li {
   position: relative;
   list-style: none;
-  padding-top: 2%;
+  padding-top: 0.5%;
 }
 
 header ul li a {
@@ -245,7 +245,7 @@ header.sticky ul li a {
 .about {
   margin: 2%;
   margin-bottom: 0%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .about h1 {
@@ -269,6 +269,12 @@ header.sticky ul li a {
 .services-btn:hover {
   color: #fff;
   background-color: blue;
+}
+
+/*-----------------------------------*/
+/* --Footer-- */
+footer {
+  width: 100%;
 }
 
 /*-----------------------------------*/
